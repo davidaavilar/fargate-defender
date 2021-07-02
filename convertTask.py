@@ -6,7 +6,7 @@ import sys
 
 # Global Parameters
 
-inputFile = input('Your unprotected yaml filename (without .yaml): ')
+inputFile = input('Your unprotected yaml filename (ie. "myfile.yaml": ')
 if not inputFile:
 	unprotected_fn = 'myTask_template.yaml'
 	fn = unprotected_fn.split('.')[0]
