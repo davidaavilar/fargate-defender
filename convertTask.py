@@ -16,6 +16,10 @@ else:
 
 protected_fn = fn + '-protected.yaml'
 
+tokenConsole = 'tokenConsole'
+wssConsole = 'wss://us-east1.cloud.twistlock.com:443'
+defenderImage = 'registry-auth.twistlock.com/tw_nondnxtmsu000lamye1y93szu8khcfhl/twistlock/defender:defender_21_04_421'
+
 def convertTask():
 	
 	myyaml = ''
@@ -43,7 +47,7 @@ def convertTask():
 			update_task = {"DependsOn":[{"Condition":"START","ContainerName":"TwistlockDefender"}],"Environment":[{"Name":"TW_IMAGE_NAME","Value":cdImage},{"Name":"TW_CONTAINER_NAME","Value":cdName},{"Name":"DEFENDER_TYPE","Value":"fargate"},{"Name":"FARGATE_TASK","Value":family}],"LinuxParameters":{"Capabilities":{"Add":["SYS_PTRACE"]}},"VolumesFrom":[{"ReadOnly":"false","SourceContainer":"TwistlockDefender"}]}
 			
 			# Add Defender CotainerDefinition
-			defender = {"Name":"TwistlockDefender","EntryPoint":["/usr/local/bin/defender","fargate","sidecar"],"Essential":"true","Environment":[{"Name":"INSTALL_BUNDLE","Value":"eyJzZWNyZXRzIjp7InNlcnZpY2UtcGFyYW1ldGVyIjoiMWxoamdndVZtNVlzbEVXMG5rMG01TkI1ZmtaMWNpMWt3cUZrRnhJSFM0c0Z5SmpIc1JNaDNmWUozY3ZnVzlvQWswci94MTV3czdtUXY5SkRGVkhobUE9PSJ9LCJnbG9iYWxQcm94eU9wdCI6eyJodHRwUHJveHkiOiIiLCJub1Byb3h5IjoiIiwiY2EiOiIiLCJ1c2VyIjoiIiwicGFzc3dvcmQiOnsiZW5jcnlwdGVkIjoiIn19LCJjdXN0b21lcklEIjoidXMtMi0xNTgyOTA2MTQiLCJhcGlLZXkiOiJLQlBnUzhra2wzZUowS1hrM3lKa2d0SjFrbnJwSUhSTWFSbXVTblZLWmpvakdJMGMzVkhmdVdKb2swdzVUMC94ZUpZNWt2VHRPZko2cEVmZWN1a3QvQT09IiwibWljcm9zZWdDb21wYXRpYmxlIjpmYWxzZX0="},{"Name":"DEFENDER_TYPE","Value":"fargate"},{"Name":"FARGATE_TASK","Value":family},{"Name":"WS_ADDRESS","Value":"wss://us-east1.cloud.twistlock.com:443"}],"Image":"registry-auth.twistlock.com/tw_nondnxtmsu000lamye1y93szu8khcfhl/twistlock/defender:defender_21_04_421"}
+			defender = {"Name":"TwistlockDefender","EntryPoint":["/usr/local/bin/defender","fargate","sidecar"],"Essential":"true","Environment":[{"Name":"INSTALL_BUNDLE","Value":tokenConsole},{"Name":"DEFENDER_TYPE","Value":"fargate"},{"Name":"FARGATE_TASK","Value":family},{"Name":"WS_ADDRESS","Value":wssConsole}],"Image":defenderImage}
 
 			cd.update(update_task)
 			ep = cd['EntryPoint']
