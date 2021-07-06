@@ -28,6 +28,7 @@ How to protect a Fargate task defined in AWS CloudFormation YAML - (No automatio
 https://github.com/erickrazr/PC_AWS_FARGATE_Clouformation 
 
 
+
 ### Collaborators
 David Avila    - @davidaavilar
 
