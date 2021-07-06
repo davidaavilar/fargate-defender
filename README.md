@@ -1,28 +1,19 @@
 # Convert a unprotected task to a protected task Definition (Fargate)
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_This script help you to convert a YAML AWS CloudFormation with a Fargate Task Definition into a protected TaskDefinition with Prisma Cloud App-Embedded Defender for Fargate_
 
-## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
+_The script will find the resource with "AWS::ECS::TaskDefinition" in the Cloudformation_
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_1. The script will ask for a YAML file name you have in the folder that you are running the script_
 
-```
-Da un ejemplo
-```
+_2. You have to udpate your Defender parameters. You can find them in the Console:
+tokenConsole = 'tokenConsole'
+wssConsole = 'wss://us-east1.cloud.twistlock.com:443'
+defenderImage = 'registry-auth.twistlock.com/tw_nondnxtmsu000lamye1y93szu8khcfhl/twistlock/defender:defender_21_04_421'_
 
-### Instalación 🔧
+### Output 🔧
 
+_The output will put a new filename ending with "protected"_
 
-## Despliegue 📦
-
-
-## Construido con 🛠️
-
-
-## Contribuyendo 🖇️
