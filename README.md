@@ -30,5 +30,6 @@ https://github.com/erickrazr/PC_AWS_FARGATE_Clouformation
 
 ## Collaborators
 David Avila    - @davidaavilar
+
 Erick Ferreira - @erickrazr
 
