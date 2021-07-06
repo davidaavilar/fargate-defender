@@ -18,7 +18,7 @@ protected_fn = fn + '-protected.yaml'
 
 tokenConsole = 'tokenConsole'
 wssConsole = 'wss://us-east1.cloud.twistlock.com:443'
-defenderImage = 'registry-auth.twistlock.com/tw_nondnxtmsu000lamye1y93szu8khcfhl/twistlock/defender:defender_21_04_421'
+defenderImage = 'registry-auth.twistlock.com/tw_Token/twistlock/defender:defender_21_04_421'
 
 def convertTask():
 	

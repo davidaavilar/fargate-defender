@@ -14,7 +14,7 @@ The script will find the resource with "AWS::ECS::TaskDefinition" in the Cloudfo
 
    _wssConsole = 'wss://us-east1.cloud.twistlock.com:443'_
 
-   _defenderImage = 'registry-auth.twistlock.com/tw_nondnxtmsu000lamye1y93szu8khcfhl/twistlock/defender:defender_21_04_421'_
+   _defenderImage = 'registry-auth.twistlock.com/tw_TOKEN/twistlock/defender:defender_21_04_421'_
 
 ### Output 🔧
 
