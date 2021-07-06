@@ -19,3 +19,16 @@ The script will find the resource with "AWS::ECS::TaskDefinition" in the Cloudfo
 ### Output 🔧
 
 The output will put a new filename ending with "protected".
+
+
+## References
+
+How to protect a Fargate task defined in AWS CloudFormation YAML - (No automation)
+
+https://github.com/erickrazr/PC_AWS_FARGATE_Clouformation 
+
+
+## Collaborators
+David Avila    - @davidaavilar
+Erick Ferreira - @erickrazr
+
